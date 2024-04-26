@@ -1,0 +1,149 @@
+@use 'colors' as *;
+@use 'mixin' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: 1rem;
+	font-family: 'Mulish', sans-serif;
+	overflow-x: hidden;
+}
+
+// HEADER
+
+.header {
+	height: 100vh;
+	&__mobile {
+		&--top {
+			position: relative;
+			height: 15vh;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&--bottom {
+			height: 85vh;
+			display: flex;
+			justify-content: center;
+		}
+
+		&--iconWrapper {
+			display: flex;
+			align-items: center;
+		}
+
+		&--iconTop {
+			text-decoration: none;
+			color: $green;
+			font-size: 4rem;
+			padding: 1rem;
+			margin-left: 1rem;
+		}
+
+		&--title {
+			font-size: 4rem;
+		}
+
+		&--iconBottom {
+			margin-top: 10rem;
+			font-size: 30rem;
+			color: $green;
+			transition: transform 0.4s;
+			z-index: -1;
+		}
+
+		&--span {
+			color: $green;
+		}
+
+		&--hamburger {
+			z-index: 1;
+		}
+	}
+}
+
+// MOBILE
+
+.nav {
+	&__mobile {
+		z-index: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		transform: translateX(-1000%);
+		transition: transform 0.4s;
+		background-color: $green;
+
+		&--menu {
+			@include mobileItemSmall;
+			text-transform: uppercase;
+			font-size: 3.2rem;
+			background-color: $white;
+			color: $green;
+			margin-bottom: 3rem;
+
+			&:hover {
+				opacity: 0.8;
+			}
+
+			&:active {
+				transform: scale(0.98);
+			}
+
+			&:focus {
+				outline: none;
+				opacity: 0.8;
+			}
+		}
+
+		&--item {
+			@include mobileItemSmall;
+			text-transform: uppercase;
+			text-decoration: none;
+			font-size: 2.5rem;
+			color: $white;
+			border: 1px solid $white;
+			margin: 1rem;
+
+			&:hover {
+				background-color: $white;
+				color: $green;
+			}
+			&:active {
+				transform: scale(0.98);
+			}
+
+			&:focus {
+				outline: none;
+				background-color: $white;
+				color: $green;
+			}
+		}
+	}
+}
+
+.nav-mobile-is-active {
+	transform: translateY(0);
+}
+
+.header-bottom-icon-rotate {
+	transform: rotateY(180deg);
+}
