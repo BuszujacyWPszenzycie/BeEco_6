@@ -10,10 +10,18 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
   rel="stylesheet">
+<link
+  href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Comfortaa:wght@300..700&family=Courgette&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+  rel="stylesheet">
+
+
 <script src="https://kit.fontawesome.com/288c8cccc3.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/@phosphor-icons/web"></script>
 <link rel="stylesheet" href="../dist/css/hamburger.min.css">
 <link rel="stylesheet" href="../dist/css/main.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body>
@@ -24,10 +32,10 @@
 
       <div class="header__mobile--top">
 
-        <div class="header__mobile--iconWrapper">
-          <a href="#"><i class="fa-solid fa-leaf header__mobile--iconTop"></i></a>
+        <a href="#" class="header__mobile--iconWrapper">
+          <i class="fa-solid fa-leaf header__mobile--iconTop"></i>
           <p class="header__mobile--title">Be<span class="header__mobile--span">Eco</span></p>
-        </div>
+        </a>
 
         <button class="hamburger hamburger--stand header__mobile--hamburger" type="button">
           <span class="hamburger-box">
@@ -50,7 +58,43 @@
 
     </div>
 
+    <div class="header__desktop">
+
+      <div class="header__desktop--top">
+
+        <a href="#" class="header__desktop--iconWrapper">
+          <i class="fa-solid fa-leaf header__desktop--iconTop"></i>
+          <p class="header__desktop--title">Be<span class="header__desktop--span">Eco</span></p>
+        </a>
+
+        <nav class="nav__desktop">
+          <a href="" class="nav__desktop--item">segreguj</a>
+          <a href="" class="nav__desktop--item">wyszukiwarka</a>
+          <a href="" class="nav__desktop--item">kontakt</a>
+        </nav>
+
+      </div>
+
+      <div class="header__desktop--bottom">
+        <div class="header__desktop--shadow"></div>
+        <div class="header__desktop--image">
+          <div class="header__desktop--titleWrapper">
+            <h1 class="header__desktop--titleBottom"><span class="header__desktop--spanBottom">Daj </span><span
+                class="header__desktop--spanBottom">przykład</span></h1>
+            <h1 class="header__desktop--titleBottom"><span class="header__desktop--spanBottom">Segreguj</span>
+              <span class="header__desktop--spanBottom">odpady</span>
+            </h1>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
   </header>
+
+  <section class=" segregate" id="segregate"></section>
+
 
   <script src="../dist/js/script.min.js"></script>
 </body>

@@ -1,2 +1,45 @@
 @media (min-width: 576px) {
+	.header {
+		&__mobile {
+			&--iconTop {
+				font-size: 4.4rem;
+			}
+
+			&--title {
+				font-size: 4.4rem;
+			}
+
+			&--iconBottom {
+				font-size: 32rem;
+			}
+		}
+	}
+
+	.nav {
+		&__mobile {
+			&--menu {
+				width: 325px;
+				height: 60px;
+				font-size: 3.6rem;
+			}
+			&--item {
+				width: 325px;
+				height: 60px;
+				font-size: 2.9rem;
+			}
+		}
+	}
+
+	.hamburger-inner,
+	.hamburger-inner::before,
+	.hamburger-inner::after {
+		width: 50px;
+	}
+
+	.hamburger-inner::before {
+		top: -12px;
+	}
+	.hamburger-inner::after {
+		bottom: -12px;
+	}
 }
