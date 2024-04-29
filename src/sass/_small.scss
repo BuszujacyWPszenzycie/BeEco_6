@@ -42,4 +42,18 @@
 	.hamburger-inner::after {
 		bottom: -12px;
 	}
+
+	.segregate {
+		&__mobile {
+			&--iconWrapper {
+				width: 40%;
+				height: 200px;
+				margin: 2rem;
+			}
+
+			&--icon {
+				font-size: 7rem;
+			}
+		}
+	}
 }

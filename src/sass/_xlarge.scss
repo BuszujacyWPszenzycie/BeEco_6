@@ -1,2 +1,26 @@
 @media (min-width: 1200px) {
+	.header {
+		&__desktop {
+			&--iconTop {
+				font-size: 6rem;
+			}
+
+			&--titleBottom {
+				font-size: 5rem;
+			}
+
+			&--title {
+				font-size: 6rem;
+			}
+		}
+	}
+
+	.nav {
+		&__desktop {
+			&--item {
+				font-size: 2rem;
+				width: 200px;
+			}
+		}
+	}
 }

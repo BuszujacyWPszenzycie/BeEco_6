@@ -283,7 +283,114 @@ body {
 // SEGREGATE
 
 .segregate {
-	height: 100vh;
+	margin-top: 10rem;
+	min-height: 100vh;
+
+	&__mobile {
+		&--top {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		&--iconWrapper {
+			width: 80%;
+			height: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 2rem;
+			border: 2px solid $dark-gray;
+			transition: transform 0.4s, background-color 0.4s, color 0.4s;
+
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+
+		&--icon {
+			font-size: 5rem;
+			color: $dark-gray;
+			transition: color 0.4s, background-color 0.4s, transform 0.4s;
+		}
+	}
+
+	&__desktop {
+		display: flex;
+
+		&--item {
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 80vh;
+			cursor: pointer;
+			flex: 0.5;
+			margin: 10px;
+			position: relative;
+			transition: 0.4s;
+		}
+
+		&--item:nth-child(1) {
+			background-image: url(../../dist/img/plastic_small.jpg);
+		}
+
+		&--item:nth-child(2) {
+			background-image: url(../../dist/img/paper_small.jpg);
+		}
+
+		&--item:nth-child(3) {
+			background-image: url(../../dist/img/glass_small.jpg);
+		}
+
+		&--item:nth-child(4) {
+			background-image: url(../../dist/img/bio_small.jpg);
+		}
+
+		&--item:nth-child(5) {
+			background-image: url(../../dist/img/mixed_small.jpg);
+		}
+
+		&--title {
+			font-size: 24px;
+			color: $white;
+			text-transform: uppercase;
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			margin: 0;
+			opacity: 1;
+			transition: opacity 0.2s ease-in 0.4s;
+			writing-mode: vertical-lr;
+		}
+		&--shadow {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.6);
+		}
+	}
+}
+
+.iconWrapper-active {
+	background-color: $green;
+	transform: scale(1.05);
+}
+
+.icon-active {
+	color: $white;
+}
+
+.item-active {
+	flex: 5;
+}
+
+.shadow-active {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.title-active {
+	opacity: 0;
 }
 
 @import './small';
