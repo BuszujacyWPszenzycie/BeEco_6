@@ -302,6 +302,7 @@ body {
 			align-items: center;
 			margin: 2rem;
 			border: 2px solid $dark-gray;
+			box-shadow: 5px 5px 5px 1px rgba(15, 15, 15, 0.4);
 			transition: transform 0.4s, background-color 0.4s, color 0.4s;
 
 			&:hover {
@@ -314,10 +315,63 @@ body {
 			color: $dark-gray;
 			transition: color 0.4s, background-color 0.4s, transform 0.4s;
 		}
+
+		&--bottom {
+			margin-top: 10rem;
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+
+		&--table {
+			position: relative;
+			width: 80%;
+			height: 400px;
+			margin: 2rem;
+
+			box-shadow: 5px 5px 5px 1px rgba(15, 15, 15, 0.4);
+		}
+
+		&--tableIcon {
+			font-size: 20rem;
+			color: $white;
+		}
+
+		&--front {
+			background-color: $green;
+			opacity: 0.8;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 1;
+			transition: opacity 0.4s;
+		}
+
+		&--back {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			font-size: 2.5rem;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			opacity: 0;
+			padding: 3rem;
+			transition: opacity 0.4s;
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	&__desktop {
 		display: flex;
+		display: none;
 
 		&--item {
 			background-size: cover;
@@ -329,6 +383,7 @@ body {
 			margin: 10px;
 			position: relative;
 			transition: 0.4s;
+			box-shadow: 5px 5px 5px 1px rgba(15, 15, 15, 0.4);
 		}
 
 		&--item:nth-child(1) {
@@ -391,6 +446,15 @@ body {
 
 .title-active {
 	opacity: 0;
+}
+
+.show-back {
+	opacity: 1;
+	z-index: 2;
+}
+
+.hide-front {
+	opacity: 0.1;
 }
 
 @import './small';
